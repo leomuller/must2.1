@@ -1,0 +1,68 @@
+<%- include("../partials/header.ejs")%>
+
+<h1>GIT helper</h1>
+
+
+<p>
+    <strong>Always </strong> add to source control. 
+
+</p>
+
+<h2>General instructions working with git:</h2>
+
+<p>
+    
+Structure:
+    <ol type="A">
+        <li>You working directory (local folder)</li>
+        <li>Staging area (which files are connected to GIT)</li>
+        <li>Local GIT repo (DB of all files)</li>
+        <li>Remote GIT repo (GitHub, same as local, but remote)</li>
+    </ol>
+</p>
+
+<img src="/assets/img/helpers/git_diagram.png" >
+
+
+<br />
+<br />
+
+<ul>
+    <li>To create first time local GIT repo, (.git folder) run "git init"</li>
+    <li>
+        To add to staging area "git add filename.cs" 
+        <ul>
+            <li>to do all files in current folder and inside use "git add ."</li>
+        </ul>
+    </li>
+    <li>To see pending files (changed but not committed yet), run "git status".</li>
+    <li>to save to local GIT Repo run "git commit -m "add new feature""</li>
+    <li>To check differences: "git diff file.txt"</li>
+    <li>to roll back to last commited version: "git checkout file.txt"</li>
+    <li>
+        to connect to remote GIT from local GIT: "git remote add origin https://githuburl/file.git" (default name is origin)
+        <ul>
+            <li>to push from local to remote git: git push -u origin main</li>
+        </ul>
+    </li>
+</ul>
+
+
+<!--
+
+1. To create first time local GIT repo, (.git folder) run "git init"
+2. To add to staging area "git add filename.cs" 
+    2.1 to do all files in current folder and inside use "git add ."
+3. To see pending files (changed but not committed yet), run "git status".
+4. to save to local GIT Repo run "git commit -m "add new feature""
+5. To check differences: "git diff file.txt"
+6. to roll back to last commited version: "git checkout file.txt"
+7. to connect to remote GIT from local GIT: "git remote add origin https://githuburl/file.git" (default name is origin)
+    7.1 to push from local to remote git: git push -u origin main
+
+-->
+
+
+
+
+<%- include("../partials/footer.ejs")%>  
